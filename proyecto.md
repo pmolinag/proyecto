@@ -1,4 +1,4 @@
-## PRUEBA
+
 ### PROYECTO 1
 Se trata de el primer trabajo de la asignatura Sistemas Operativos, en el cual, incide sobre dos
 vertientes de los Sistemas Operativos: Seguridad y Procesos.
@@ -19,9 +19,9 @@ mayúscula o minúscula;
 Todos los programas tendrán que guardar en un archivo de texto los registros necesarios para
 analizar en en tiempo real el estado de su programa. Se podrán utilizar procesos en paralelo (fork)
 para obtener un mejor rendimiento. El recurso a esta tecnología influenciará la nota final.
-  
+
  ### PROYECTO 2
- 
+
  Se trata de el segundo trabajo de la asignatura Sistemas Operativos, en el cual, incide sobre tres
 vertientes de los Sistemas Operativos: Seguridad, Threads y señales.
 
@@ -43,5 +43,3 @@ procesamiento y esperar un nuevo trabajo;
 - Al ejecutar Ctrl + Z durante la búsqueda de una palabra clave, la aplicación debe imprimir el
 documento el número de palabras del diccionario ya procesadas (por subproceso y total);
 - Al ejecutar Ctrl + C deberá cerrar todos los recursos utilizados y terminar la aplicación.
-  
-  
