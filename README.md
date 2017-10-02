@@ -6,7 +6,7 @@ El proyecto es un bot en telegram, implementado principalmente en python, el cua
 
 Para ello, voy a utilizar:
 
-1. Lenguaje principal: python
-2. Sistema de gestión de nube: Azure
-3. API de telegram(telebot para python)
-4. La gestión de la base de datos la haré con MySQL
+- Lenguaje principal: python
+- Sistema de gestión de nube: Azure
+- API de telegram(telebot para python)
+- La gestión de la base de datos la haré con MySQL
