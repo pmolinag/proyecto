@@ -1,33 +1,22 @@
-import telebot
-from array import array
+import requests
+from bs4 import BeautifulSoup
+import re
 
-class origen:
-    
-class Vuelos:
-    def __init__(self, origen, destino):
-        self.origen = origen
-        self.destino = destino
+ciudades_con_vuelos = []
+ciudades_a_volar = []
 
-## Crear array de precios, origenes y destinos
+def buscadorCiudadOrigen(busqueda):
 
-precios = []
-
-API_TOKEN = '454898606:AAFwqtEeAqtj3Lca55wbg62rMsQ83Iz4of0'
-
-bot = telebot.TeleBot(API_TOKEN)
-
-# Handle '/start' and '/help'
-@bot.message_handler(commands=['start'])
-def send_welcome(message):
-    bot.reply_to(message, """\
-Hi there, I am FlyFinderBot.
-I will help you to find the best fly where\
-""")
+    ciudad = busqueda.lower()
+    ciudad = re.sub(r'\s+', ' ', juego)
+    ciudad = juego.replace(" ", "-")
 
 
-# Handle all other messages with content_type 'text' (content_types defaults to ['text'])
-@bot.message_handler(func=lambda message: True)
-def echo_message(message):
-    bot.reply_to(message,"Eres to fea.")
+    url_base = "https://www.ryanair.com/es/es/"
+    url_juego = url_base + juego
+    url_final = requests.get(url_juego, headers=headers)
 
-bot.polling()
+    if (url_final.status_code == 404 or juego == ''):
+        #print("El juego buscado no se encuentra en la base de datos de Metacritic")
+        #lista_final.append("El juego introducido no se encuentra en la base de datos de Metacritic")
+        return -1

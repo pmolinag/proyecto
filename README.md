@@ -15,6 +15,10 @@ Para ello, voy a utilizar:
 Instalamos una libreria que nos ayudara a recoger datos de las webs de vuelos:
 - sudo apt-get install python-bs4 o pip install beautifulsoup4
 
+Tambien instalaremos la libreria request para poder descargarnos paginas web enteras, para luego poder recoger sus datos.
+
+- pip install requests
+
 Y, por supuesto, tener instalado Python
 - sudo apt-get install python
 
