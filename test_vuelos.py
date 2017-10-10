@@ -14,7 +14,7 @@ class vuelos():
         if destino not in self.cdestino:
             self.cdestino.append(destino)
         vuelo = origen + '-' + destino
-        self.vuelos[vuelo] = precio  
+        self.vuelos[vuelo] = precio   
 
         return vuelo + ',' + str(self.vuelos[vuelo])
 
