@@ -2,6 +2,8 @@
 
 [Site](https://pmolinag.github.io/proyecto/)
 
+https://travis-ci.org/pmolinag/proyecto.svg?branch=master
+
 El proyecto es un bot en telegram, implementado principalmente en python, el cual será un buscador de los vuelos más baratos disponibles entre las paginas web de viaje más conocidas, desde la ciudad que el usuario introduzca hasta otra ciudad destino.
 
 Para ello, voy a utilizar:
@@ -46,6 +48,3 @@ Las ventajas de esto son claras, la primera, cada vez que alguien sube algo al c
 Otra gran ventaja, orientada a la entrega de valor, es que sin un esfuerzo adicional, en cualquier momento del sprint o iteración, podemos disponer de un conjunto de binarios, compilados con la última versión, y con su conjunto de pruebas unitarias pasadas, de modo que podemos pasar a un entorno de despliegue para poder enseñarlo a las partes interesadas, realizar pruebas más exhaustivas, o incluso, en casos de urgencia hacer un despliegue rápido.
 
 El motivo por el que he eligido TravisCI es porque te permite conectarlo facimente a Github y esta compuesto de multiples runtimes (Node.js, o versiones de PHP, por ejemplo) o data stores. De este modo, podemos probar nuestras librerías o aplicaciones contra distintas configuraciones sin tener que tenerlas instaladas localmente.
-
-Enlace a travis:
-- https://travis-ci.org/pmolinag/proyecto
