@@ -77,6 +77,12 @@ Por ultimo, para desplegar nuestra aplicacion en Heroku, desde el repositorio qu
 
 git push heroku master
 
+Para probar yo que funciona y que está desplegada en heroku, uso el siguiente comando:
+
+heroku local
+
+En ese momento, se activa el bot en telegram y podemos empezar a comunicarnos con el
+
 Despliegue https://flyfinder.herokuapp.com/
 
 ## Bot
