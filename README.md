@@ -54,7 +54,7 @@ El motivo por el que he eligido TravisCI es porque te permite conectarlo facimen
 ## Paas
 El PaaS elegido es keroku debido a la rapidez con la que se puede desplegar aquí un aplicacion en la nube, a parte de que soporta una gran cantidad de lenguajes.
 
-Despliege https://flyfinder.herokuapp.com/
+Despliege hecho en https://flyfinder.herokuapp.com/
 
 ## Bot
 Se puede probar el bot en telegram, buscando flyfinder, aunque por ahora no tengo configuradas ninguna opcion, solo el saludo.
