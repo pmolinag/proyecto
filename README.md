@@ -57,4 +57,4 @@ El PaaS elegido es keroku debido a la rapidez con la que se puede desplegar aqu√
 Despliege https://flyfinder.herokuapp.com/
 
 ##Bot
-Se puede probar el bot en telegram, buscando flyfinder, aunque por ahora no tengo configuradas ninguna opcion, solo el saludo.
+Se puede probar el bot en telegram, buscando flyfinder, aunque por ahora no tengo configuradas ninguna opcion, solo el saludo. 
