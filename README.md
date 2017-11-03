@@ -53,8 +53,31 @@ El motivo por el que he eligido TravisCI es porque te permite conectarlo facimen
 
 ## Paas
 El PaaS elegido es keroku debido a la rapidez con la que se puede desplegar aquí un aplicacion en la nube, a parte de que soporta una gran cantidad de lenguajes.
+Es necesario tener git instalado. Suponiendo que lo tenemos instalado, pasamos a instalar heroku.
+Para Ubuntu:
 
-Despliege hecho en https://flyfinder.herokuapp.com/
+wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
+
+Una vez instalado, hacemos login con:
+
+heroku login
+
+Creamos la app:
+
+heroky create   (esto le asigna un nombre por defecto que luego en la web puedes cambiar)
+
+Para mas informacion sobre como desarrollar la aplicacion en Heroku, Heroku tiene un manual:
+https://devcenter.heroku.com/start
+
+Para conectar nuestro repositorio con heroku, lo hacemos remoto con:
+
+heroku git:remote -a nombre_app
+
+Por ultimo, para desplegar nuestra aplicacion en Heroku, desde el repositorio que queremos desplegar, hacemos:
+
+git push heroku master
+
+Despliege https://flyfinder.herokuapp.com/
 
 ## Bot
 Se puede probar el bot en telegram, buscando flyfinder, aunque por ahora no tengo configuradas ninguna opcion, solo el saludo.
