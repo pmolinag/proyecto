@@ -52,7 +52,7 @@ Otra gran ventaja, orientada a la entrega de valor, es que sin un esfuerzo adici
 El motivo por el que he eligido TravisCI es porque te permite conectarlo facimente a Github y esta compuesto de multiples runtimes (Node.js, o versiones de PHP, por ejemplo) o data stores. De este modo, podemos probar nuestras librerías o aplicaciones contra distintas configuraciones sin tener que tenerlas instaladas localmente.
 
 ## Paas
-El PaaS elegido es keroku debido a la rapidez con la que se puede desplegar aquí un aplicacion en la nuve
+El PaaS elegido es keroku debido a la rapidez con la que se puede desplegar aquí un aplicacion en la nube, a parte de que soporta una gran cantidad de lenguajes.
 
 Despliege https://flyfinder.herokuapp.com/
 
