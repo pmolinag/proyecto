@@ -1,1 +1,1 @@
-web: gunicorn vuelos_rest:app --log-file -
+web: gunicorn vuelos_rest.wsgi --log-file -
