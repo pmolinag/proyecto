@@ -8,7 +8,7 @@ vuelos_prueba.insertaVuelo( "Madrid", "Paris",50)
 
 @app.route('/')
 def test():
-    return {'Status' : 'OK'}
+    return {'status': 'OK'}
 
 @app.route('/dest', methods=['GET'])
 def get_dest():
