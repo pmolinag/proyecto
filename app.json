@@ -2,6 +2,6 @@
   "name": "FlyFinderBot para Telegram",
   "description": "Bot para buscar vuelos en Telegram",
   "repository": "https://github.com/pmolinag/proyecto",
-  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "logo": "http://cdn.20m.es/img2/recortes/2017/06/19/494844-620-282.jpg",
   "keywords": ["python", "flyfinder"]
 }
