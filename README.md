@@ -64,7 +64,7 @@ heroku login
 
 Creamos la app:
 
-heroky create   (esto le asigna un nombre por defecto que luego en la web puedes cambiar)
+heroku create   (esto le asigna un nombre por defecto que luego en la web puedes cambiar)
 
 Para mas informacion sobre como desarrollar la aplicacion en Heroku, Heroku tiene un manual:
 https://devcenter.heroku.com/start
@@ -77,11 +77,20 @@ Por ultimo, para desplegar nuestra aplicacion en Heroku, desde el repositorio qu
 
 git push heroku master
 
-Para probar yo que funciona y que está desplegada en heroku, uso el siguiente comando:
+Para lanzar el bot y el servicio web, inicializamos dyno:
 
-heroku local
+heroku ps:scale web=1 --app flyfinder (servicio web)
+heroku ps:scale worker=1 --app flyfinder (bot Flyfinder)
 
-En ese momento, se activa el bot en telegram y podemos empezar a comunicarnos con el
+Para comprobar, hacemos:
+
+heroku ps
+
+Si estan los 2 servicios en up, está correctamente inicializado.
+
+Lo abrimos:
+
+heroku open
 
 Despliegue https://flyfinder.herokuapp.com/
 
