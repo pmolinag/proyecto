@@ -56,43 +56,40 @@ El PaaS elegido es keroku debido a la rapidez con la que se puede desplegar aqu√
 Es necesario tener git instalado. Suponiendo que lo tenemos instalado, pasamos a instalar heroku.
 Para Ubuntu:
 
-wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
+- wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
 
 Una vez instalado, hacemos login con:
 
-heroku login
+- heroku login
 
 Creamos la app:
 
-heroku create   (esto le asigna un nombre por defecto que luego en la web puedes cambiar)
+- heroku create   (esto le asigna un nombre por defecto que luego en la web puedes cambiar)
 
 Para mas informacion sobre como desarrollar la aplicacion en Heroku, Heroku tiene un manual:
 https://devcenter.heroku.com/start
 
 Para conectar nuestro repositorio con heroku, lo hacemos remoto con:
 
-heroku git:remote -a nombre_app
+- heroku git:remote -a nombre_app
 
 Por ultimo, para desplegar nuestra aplicacion en Heroku, desde el repositorio que queremos desplegar, hacemos:
 
-git push heroku master
+- git push heroku master
 
 Para lanzar el bot y el servicio web, inicializamos dyno:
 
-heroku ps:scale web=1 --app flyfinder (servicio web)
-heroku ps:scale worker=1 --app flyfinder (bot Flyfinder)
+- heroku ps:scale web=1 --app flyfinder (servicio web)
+- heroku ps:scale worker=1 --app flyfinder (bot Flyfinder)
 
 Para comprobar, hacemos:
 
-heroku ps
+- heroku ps
 
 Si estan los 2 servicios en up, est√° correctamente inicializado.
 
 Lo abrimos:
 
-heroku open
+- heroku open
 
 Despliegue https://flyfinder.herokuapp.com/
-
-## Bot
-Se puede probar el bot en telegram, buscando flyfinder, aunque por ahora no tengo configuradas ninguna opcion, solo el saludo.
