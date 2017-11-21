@@ -101,15 +101,36 @@ El primer paso va a ser crearnos un repositorio en Docker Hub y lo enlazamos con
 
 Quedará tal que así:
 
-¡[Imagen DockerHub](/home/pablo/Escritorio/Captura de pantalla de 2017-11-18 20-10-26.png)
-
-¡[Imagen DockerHub](/home/pablo/Escritorio/Captura de pantalla de 2017-11-18 20-10-54.png)
+![Imagen DockerHub](./img/docker1.png)
+![Imagen DockerHub](./img/docker2.png)
+![Imagen DockerHub](./img/docker3.png)
 
 A continuación, creamos el archivo Dockerfile y lo subimos a nuestro repositorio de Github para poder obtener una imagen Docker.
 
 Hacemos:
 - docker pull pmolinag/proyecto
 - docker run -i -t pmolinag/proyecto:latest /bin/bash (con este comando vemos si funciona)
+
+Despliegue en DockerHub: https://hub.docker.com/r/pmolinag/proyecto/
+
+Pasamos a Azure.
+
+Nos creamos una cuenta free trial en azure o pedimos un cupon a JJ.
+Una vez dentro, vamos a marketplace -> web y movil y buscamos Web App for Containers.
+Le damos a obtener ahora y rellenamos los campos así:
+![Imagen Azure](./img/azure.png)
+
+Y ya lo tenemos, solo falta cambiarle el puerto al Dockerfile añadiendo esto al final:
+
+EXPOSE 8000
+WORKDIR proyecto/
+CMD gunicorn vuelos_rest:app --log-file - --bind 0.0.0.0:8000
+
+Cabe recalcar que todo esto tambien se puede hacer por la linea de comando que tiene Azura, az, tal y como se explica en este tutorial:
+
+[Tutorial Azure](https://docs.microsoft.com/es-es/azure/app-service/containers/tutorial-custom-docker-image)
+
+Despliegue en Azure: http://proyecto-iv.azurewebsites.net/
 
 
 
