@@ -111,8 +111,6 @@ Hacemos:
 - docker pull pmolinag/proyecto
 - docker run -i -t pmolinag/proyecto:latest /bin/bash (con este comando vemos si funciona)
 
-Despliegue hecho en: https://hub.docker.com/r/pmolinag/proyecto/
-
 Pasamos a Azure.
 
 Nos creamos una cuenta free trial en azure o pedimos un cupon a JJ.
@@ -132,7 +130,7 @@ Cabe recalcar que todo esto tambien se puede hacer por la linea de comando que t
 
 Contenedor: http://proyecto-iv.azurewebsites.net/status
 
-
+DockerHub: https://hub.docker.com/r/pmolinag/proyecto/
 
 
 
