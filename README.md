@@ -111,7 +111,7 @@ Hacemos:
 - docker pull pmolinag/proyecto
 - docker run -i -t pmolinag/proyecto:latest /bin/bash (con este comando vemos si funciona)
 
-Despliegue en DockerHub: https://hub.docker.com/r/pmolinag/proyecto/
+Despliegue hecho en: https://hub.docker.com/r/pmolinag/proyecto/
 
 Pasamos a Azure.
 
