@@ -93,3 +93,35 @@ Lo abrimos:
 - heroku open
 
 Despliegue https://flyfinder.herokuapp.com/
+
+## Despliegue de contenedores Docker en en DockerHub y Azure
+El primer paso va a ser crearnos un repositorio en Docker Hub y lo enlazamos con nuestro de github tal y como se explica en el siguiente link(pongo el enlace directamente porque hay que configurarlo por la web, no por comandos, y me evito llenar esto de fotos).
+
+- [Comenzar en Docker hub](https://github.com/docker/dceu_tutorials/blob/master/08-Automated-builds.md)
+
+Quedará tal que así:
+
+¡[Imagen DockerHub](/home/pablo/Escritorio/Captura de pantalla de 2017-11-18 20-10-26.png)
+
+¡[Imagen DockerHub](/home/pablo/Escritorio/Captura de pantalla de 2017-11-18 20-10-54.png)
+
+A continuación, creamos el archivo Dockerfile y lo subimos a nuestro repositorio de Github para poder obtener una imagen Docker.
+
+Hacemos:
+- docker pull pmolinag/proyecto
+- docker run -i -t pmolinag/proyecto:latest /bin/bash (con este comando vemos si funciona)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
