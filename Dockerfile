@@ -10,4 +10,4 @@ RUN cd proyecto/ && pip3 install -r requirements.txt
 
 EXPOSE 8000
 WORKDIR proyecto/
-CMD gunicorn app:app --log-file=- --bin 0.0.0.0:8000
+CMD gunicorn app:app --log-file=- --bind 0.0.0.0:8000
