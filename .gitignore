@@ -9,6 +9,7 @@
 *.[oa]
 *~
 *.#
+*.md~
 **/.DS_Store
 # Ignore Mac DS_Store files
 .DS_Store
