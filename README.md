@@ -130,7 +130,7 @@ Cabe recalcar que todo esto tambien se puede hacer por la linea de comando que t
 
 [Tutorial Azure](https://docs.microsoft.com/es-es/azure/app-service/containers/tutorial-custom-docker-image)
 
-Despliegue en Azure: http://proyecto-iv.azurewebsites.net/
+Despliegue en Azure: http://proyecto-iv.azurewebsites.net/status
 
 
 
