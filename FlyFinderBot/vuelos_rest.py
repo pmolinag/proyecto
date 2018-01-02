@@ -10,6 +10,10 @@ vuelos_prueba.insertaVuelo( "Madrid", "Paris",50)
 def test():
     return jsonify({'status': 'OK'})
 
+@app.route('/status', methods=['GET'])
+def test():
+    return jsonify({'status': 'OK'})
+
 @app.route('/dest', methods=['GET'])
 def get_dest():
     return jsonify({'Ciudades destino' : vuelos_prueba.cdestino})
