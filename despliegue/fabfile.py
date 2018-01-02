@@ -14,7 +14,7 @@ def borrar():
     run ('rm -rf proyecto')
 
 def testear():
-        run ('cd ~/proyecto &&  python3 test_vuelos.py')
+        run ('cd ~/proyecto &&  python3 ./FlyFinderBot/test_vuelos.py')
 
 def instalar():
     run ('cd ~/proyecto && sudo pip3 install -r requirements.txt')
