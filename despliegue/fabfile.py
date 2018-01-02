@@ -7,7 +7,7 @@ def descargar():
     run ('sudo git clone https://github.com/pmolinag/proyecto')
 
 def iniciar():
-    run ('cd ~/proyecto && sudo python3 ./FlyFinderBot/vuelos_rest.py')
+    run ('cd ~/proyecto && sudo -E python3 ./FlyFinderBot/vuelos_rest.py',pty=False)
 
 
 def borrar():
