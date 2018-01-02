@@ -14,4 +14,4 @@ RUN cd proyecto/ && pip install -r requirements.txt
 
 EXPOSE 8000
 WORKDIR proyecto/
-CMD gunicorn vuelos_rest:app --log-file - --bind 0.0.0.0:8000
+CMD gunicorn ./FlyFinderBot/vuelos_rest:app --log-file - --bind 0.0.0.0:8000
