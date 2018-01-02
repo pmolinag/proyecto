@@ -7,17 +7,17 @@ def descargar():
     run ('sudo git clone https://github.com/pmolinag/proyecto')
 
 def iniciar():
-    run ('sudo python3 proyecto/FlyFinderBot/vuelos_rest.py')
+    run ('cd ~/proyecto && sudo python3 ./FlyFinderBot/vuelos_rest.py')
 
 
 def borrar():
     run ('rm -rf proyecto')
 
 def testear():
-        run ('cd proyecto/ &&  python3 test_vuelos.py')
+        run ('cd ~/proyecto &&  python3 test_vuelos.py')
 
 def instalar():
-    run ('cd proyecto && sudo pip3 install -r requirements.txt')
+    run ('cd ~/proyecto && sudo pip3 install -r requirements.txt')
 
 def recargar():
     run("sudo supervisorctl reload")
