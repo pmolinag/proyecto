@@ -124,7 +124,7 @@ Y ya lo tenemos, solo falta cambiarle el puerto al Dockerfile añadiendo esto al
 - WORKDIR proyecto/
 - CMD gunicorn vuelos_rest:app --log-file - --bind 0.0.0.0:8000
 
-Cabe recalcar que todo esto tambien se puede hacer por la linea de comando que tiene Azura, az, tal y como se explica en este tutorial:
+Cabe recalcar que todo esto tambien se puede hacer por la linea de comando que tiene Azure, az, tal y como se explica en este tutorial:
 
 [Tutorial Azure](https://docs.microsoft.com/es-es/azure/app-service/containers/tutorial-custom-docker-image)
 
