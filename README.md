@@ -132,6 +132,67 @@ Contenedor: https://proyecto-iv.azurewebsites.net
 
 DockerHub: https://hub.docker.com/r/pmolinag/proyecto/
 
+## Despliegue en azure con Vagrant, Ansible y Fabric
+
+-Azure login
+Accedo al modo asm de azure 
+-azure config mode asm
+Descargamos el archivo *.publishsetting con al comando:
+-azure account download
+Y accediento al enlace que pone, se nos ira a descargar, ahora lo importamos:
+-azure account import ~/Descargas/*.publishsettings
+Instalamos los certificados:
+-openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ~/.ssh/azurevagrant.key -out ~/.ssh/azurevagrant.key 
+- chmod 600 ~/.ssh/azurevagrant.key
+- openssl x509 -inform pem -in ~/.ssh/azurevagrant.key -outform der -out ~/.ssh/azurevagrant.cer
+
+Ahora accedemos a Azure Portal, vamos a Mas servicios que está abajo del todo,
+vamos a Subscripciones → certificados de administracion, seleccionamos cargar, y buscamos nuestro certificado .cer que esta en la carpeta .ssh y ahi esta nuestro certificado cargado.
+
+
+Para crear una aplicación:
+- az ad sp create-for-rbac
+-az account list --query '[?isDefault].id' -o tsv
+Esto nos da la informacion que necesitamos configurar.
+ Y este comando nos dá:
+
+![Imagen Az](./img/az.png)
+
+appID es la variable de entorno AZURE_CLIENT_ID
+password es la variable de entorno AZURE_CLIENT_SECRET
+tenant es la variable de entorno AZURE_TENANT_ID
+El ultimo comando nos da la variable de entorno AZURE_SUBSCRIPTION_ID
+Estas variables las configuramos con export VARIABLE_DE_ENTORNO=…
+Una vez hecho esto, vamos a Azure Portal, a la sección de Registro de Aplicaciones y seleccionamos la aplicación que acabamos de crear para cambiarle el nombre.
+Ahora construimos la maquina virtual con:
+-vagrant up –provider azure
+
+Tras ejecutar este comando ya podemos ir a ver nuestras maquinas virtuales en Azure Portal y ver que se ha creado correctamente.
+
+Fabric:
+Lo instalamos con:
+-sudo apt-get install fabric
+
+Tras instalar, configuramos creamos y configuramos un fichero fabfile tal que así:
+
+![Imagen Fabfile](./img/fab.png)
+
+Donde descargamos nuestro directorio con la función descargar tal que así:
+
+- fab -H vagrant@flyfinder.eastus.cloudapp.azure.com descargar
+
+Lo instalamos:
+
+- fab -H vagrant@flyfinder.eastus.cloudapp.azure.com instalar
+
+Y lo iniciamos:
+- fab -H vagrant@flyfinder.eastus.cloudapp.azure.com iniciar.
+
+Tras esto, ya tenemos nuestro despliegue en :
+
+flyfinder.eastus.cloudapp.azure.com
+
+
 
 
 
