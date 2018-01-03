@@ -134,15 +134,15 @@ DockerHub: https://hub.docker.com/r/pmolinag/proyecto/
 
 ## Despliegue en azure con Vagrant, Ansible y Fabric
 
--Azure login
+- Azure login
 Accedo al modo asm de azure 
--azure config mode asm
+- azure config mode asm
 Descargamos el archivo *.publishsetting con al comando:
--azure account download
+- azure account download
 Y accediento al enlace que pone, se nos ira a descargar, ahora lo importamos:
--azure account import ~/Descargas/*.publishsettings
+- azure account import ~/Descargas/*.publishsettings
 Instalamos los certificados:
--openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ~/.ssh/azurevagrant.key -out ~/.ssh/azurevagrant.key 
+- openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ~/.ssh/azurevagrant.key -out ~/.ssh/azurevagrant.key 
 - chmod 600 ~/.ssh/azurevagrant.key
 - openssl x509 -inform pem -in ~/.ssh/azurevagrant.key -outform der -out ~/.ssh/azurevagrant.cer
 
