@@ -175,7 +175,8 @@ El ultimo comando nos da la variable de entorno AZURE_SUBSCRIPTION_ID
 Estas variables las configuramos con export VARIABLE_DE_ENTORNO=…
 Una vez hecho esto, vamos a Azure Portal, a la sección de Registro de Aplicaciones y seleccionamos la aplicación que acabamos de crear para cambiarle el nombre.
 Ahora construimos la maquina virtual con:
--vagrant up –provider azure
+
+- vagrant up –provider azure
 
 Tras ejecutar este comando ya podemos ir a ver nuestras maquinas virtuales en Azure Portal y ver que se ha creado correctamente.
 
@@ -200,7 +201,7 @@ Y lo iniciamos:
 
 Tras esto, ya tenemos nuestro despliegue en :
 
-Despliegue final: 52.226.78.180
+Despliegue final: flyfinder.eastus.cloudapp.azure.com
 
 
 
